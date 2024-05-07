@@ -1,0 +1,224 @@
+[gd_scene load_steps=43 format=3 uid="uid://cxste5jum0njs"]
+
+[ext_resource type="Texture2D" uid="uid://c182dykxhgppl" path="res://resources/enemies/star/06-Anticipation/Anticipation 01.png" id="1_l6tdg"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ydso6"]
+[ext_resource type="Texture2D" uid="uid://bpx15kf2idm1p" path="res://resources/enemies/star/06-Anticipation/Anticipation 02.png" id="2_eu6yd"]
+[ext_resource type="Texture2D" uid="uid://dt5yv7pfoyga" path="res://resources/enemies/star/06-Anticipation/Anticipation 03.png" id="3_mm6h6"]
+[ext_resource type="Texture2D" uid="uid://c3vlmf3y7ja4o" path="res://resources/enemies/star/07-Attack/Attack 01.png" id="4_u3kwd"]
+[ext_resource type="Texture2D" uid="uid://cfc6mbpfm8duf" path="res://resources/enemies/star/07-Attack/Attack 02.png" id="5_qmc0o"]
+[ext_resource type="Texture2D" uid="uid://cd0a7ci5cn25c" path="res://resources/enemies/star/07-Attack/Attack 03.png" id="6_37krq"]
+[ext_resource type="Texture2D" uid="uid://bnifhjc28k8kx" path="res://resources/enemies/star/07-Attack/Attack 04.png" id="7_0ojuq"]
+[ext_resource type="Texture2D" uid="uid://b61j7td1nmvca" path="res://resources/enemies/star/09-Dead Hit/Dead Hit 01.png" id="8_82ylw"]
+[ext_resource type="Texture2D" uid="uid://deatjr78poorh" path="res://resources/enemies/star/09-Dead Hit/Dead Hit 02.png" id="9_37gea"]
+[ext_resource type="Texture2D" uid="uid://cchp2tcokkx4s" path="res://resources/enemies/star/09-Dead Hit/Dead Hit 03.png" id="10_1e0ky"]
+[ext_resource type="Texture2D" uid="uid://3wpuu73qjch4" path="res://resources/enemies/star/09-Dead Hit/Dead Hit 04.png" id="11_73oi0"]
+[ext_resource type="Texture2D" uid="uid://j3jqjywkxaqk" path="res://resources/enemies/star/10-Dead Ground/Dead Ground 01.png" id="12_440cu"]
+[ext_resource type="Texture2D" uid="uid://c7wo50ay6s28t" path="res://resources/enemies/star/10-Dead Ground/Dead Ground 02.png" id="13_h180m"]
+[ext_resource type="Texture2D" uid="uid://bc11wy7stwei8" path="res://resources/enemies/star/10-Dead Ground/Dead Ground 03.png" id="14_avybi"]
+[ext_resource type="Texture2D" uid="uid://bl7ar6uxmfah1" path="res://resources/enemies/star/10-Dead Ground/Dead Ground 04.png" id="15_pn0aw"]
+[ext_resource type="Texture2D" uid="uid://cckepvdgiv45n" path="res://resources/enemies/star/04-Fall/Fall 01.png" id="16_ljy17"]
+[ext_resource type="Texture2D" uid="uid://cbi5mvwrt0p8p" path="res://resources/enemies/star/05-Ground/Ground 01.png" id="17_v47wv"]
+[ext_resource type="Texture2D" uid="uid://bekt7bw0gq3dh" path="res://resources/enemies/star/05-Ground/Ground 02.png" id="18_6pl5i"]
+[ext_resource type="Texture2D" uid="uid://td73pqcdm8iy" path="res://resources/enemies/star/08-Hit/Hit 01.png" id="19_jf8v2"]
+[ext_resource type="Texture2D" uid="uid://b53icrnbb5dho" path="res://resources/enemies/star/08-Hit/Hit 02.png" id="20_0al4n"]
+[ext_resource type="Texture2D" uid="uid://cenfkyepec7td" path="res://resources/enemies/star/08-Hit/Hit 03.png" id="21_1q82m"]
+[ext_resource type="Texture2D" uid="uid://vo2n0u7uww7l" path="res://resources/enemies/star/08-Hit/Hit 04.png" id="22_siiud"]
+[ext_resource type="Texture2D" uid="uid://dvbe5r2h5r243" path="res://resources/enemies/star/01-Idle/Idle 01.png" id="23_dutbp"]
+[ext_resource type="Texture2D" uid="uid://bhgw5y6832wyb" path="res://resources/enemies/star/01-Idle/Idle 02.png" id="24_0tm7s"]
+[ext_resource type="Texture2D" uid="uid://b41qynlujrec8" path="res://resources/enemies/star/01-Idle/Idle 03.png" id="25_1ntug"]
+[ext_resource type="Texture2D" uid="uid://davhue06jllpb" path="res://resources/enemies/star/01-Idle/Idle 04.png" id="26_3npwr"]
+[ext_resource type="Texture2D" uid="uid://blmy2y2melc47" path="res://resources/enemies/star/01-Idle/Idle 05.png" id="27_3d2ou"]
+[ext_resource type="Texture2D" uid="uid://d1oify1dtev6r" path="res://resources/enemies/star/01-Idle/Idle 06.png" id="28_k6265"]
+[ext_resource type="Texture2D" uid="uid://b37vf0vr0677x" path="res://resources/enemies/star/01-Idle/Idle 07.png" id="29_lhxl6"]
+[ext_resource type="Texture2D" uid="uid://ecsjarhkfmyv" path="res://resources/enemies/star/01-Idle/Idle 08.png" id="30_7wpmi"]
+[ext_resource type="Texture2D" uid="uid://bjh7tlg1wls2a" path="res://resources/enemies/star/03-Jump/Jump 01.png" id="31_aaym6"]
+[ext_resource type="Texture2D" uid="uid://bb4uc28ivmkdo" path="res://resources/enemies/star/03-Jump/Jump 02.png" id="32_loqek"]
+[ext_resource type="Texture2D" uid="uid://pqqveksl7yy2" path="res://resources/enemies/star/03-Jump/Jump 03.png" id="33_e8lt5"]
+[ext_resource type="Texture2D" uid="uid://0b8hh3hw265o" path="res://resources/enemies/star/02-Run/Run 01.png" id="34_u632p"]
+[ext_resource type="Texture2D" uid="uid://gubtjf4xed44" path="res://resources/enemies/star/02-Run/Run 02.png" id="35_dlmgd"]
+[ext_resource type="Texture2D" uid="uid://uaedu3laf8uw" path="res://resources/enemies/star/02-Run/Run 03.png" id="36_qea7v"]
+[ext_resource type="Texture2D" uid="uid://iom5irm3n5jy" path="res://resources/enemies/star/02-Run/Run 04.png" id="37_laq48"]
+[ext_resource type="Texture2D" uid="uid://cxwdhl74xsigt" path="res://resources/enemies/star/02-Run/Run 05.png" id="38_mt6yq"]
+[ext_resource type="Texture2D" uid="uid://b4e14gnarbse5" path="res://resources/enemies/star/02-Run/Run 06.png" id="39_1qdhl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbtg2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6tdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eu6yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mm6h6")
+}],
+"loop": false,
+"name": &"anticipation",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u3kwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qmc0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_37krq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0ojuq")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_82ylw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_37gea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1e0ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_73oi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_440cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h180m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_avybi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pn0aw")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ljy17")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_v47wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6pl5i")
+}],
+"loop": false,
+"name": &"ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_jf8v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0al4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1q82m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_siiud")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_dutbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0tm7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1ntug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3npwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3d2ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k6265")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lhxl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_7wpmi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_aaym6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_loqek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_e8lt5")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_u632p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_dlmgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qea7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_laq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mt6yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_1qdhl")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cekv2"]
+size = Vector2(17, 23)
+
+[node name="Star" type="RigidBody2D"]
+collision_layer = 4
+script = ExtResource("1_ydso6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+sprite_frames = SubResource("SpriteFrames_nbtg2")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -11.5)
+shape = SubResource("RectangleShape2D_cekv2")
