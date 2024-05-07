@@ -34,16 +34,28 @@ func _update_animations(direction):
 	if direction:
 		animator.flip_h = (direction == -1)
 	
+	for attack_type in ["15_attack_1", "16_attack_2", "17_attack_3"]:
+		if animator.animation == attack_type and animator.is_playing():
+			return
+			
+	var attack = Input.is_action_just_pressed("attack")
+	
 	if is_on_floor():
 		if direction:
 			animator.play("02_run")
 		else:
 			animator.play("01_idle")
+		
+		if attack:
+			animator.play("15_attack_1")
 	else:
 		if velocity.y < 0:
 			animator.play("03_jump")
 		else:
 			animator.play("04_fall")
+		
+		if attack:
+			animator.play("17_attack_3")
 
 # Callbacks
 	
