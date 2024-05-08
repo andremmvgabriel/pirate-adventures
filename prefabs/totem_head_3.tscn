@@ -1,0 +1,209 @@
+[gd_scene load_steps=34 format=3 uid="uid://cdhl3ff3k7y1r"]
+
+[ext_resource type="Texture2D" uid="uid://k0dpc4ripvnq" path="res://resources/shooters/totems/Head 3/Attack 2/1.png" id="1_6tbjw"]
+[ext_resource type="Script" path="res://scripts/shooter.gd" id="1_66ke1"]
+[ext_resource type="Texture2D" uid="uid://brg2dvk4ld48u" path="res://resources/shooters/totems/Head 3/Attack 2/2.png" id="2_14wg8"]
+[ext_resource type="Texture2D" uid="uid://waohbpe3up4f" path="res://resources/shooters/totems/Head 3/Attack 2/3.png" id="3_2343k"]
+[ext_resource type="Texture2D" uid="uid://dbc41t0216khl" path="res://resources/shooters/totems/Head 3/Attack 2/4.png" id="4_4c0n4"]
+[ext_resource type="Texture2D" uid="uid://b6rx1h7ih24g1" path="res://resources/shooters/totems/Head 3/Attack 2/5.png" id="5_ymudx"]
+[ext_resource type="Texture2D" uid="uid://c566cicueeyww" path="res://resources/shooters/totems/Head 3/Attack 2/6.png" id="6_ubhyn"]
+[ext_resource type="Texture2D" uid="uid://q5xim84qoo7l" path="res://resources/shooters/totems/Head 3/Attack 1/1.png" id="7_5468a"]
+[ext_resource type="Texture2D" uid="uid://bmpnpsfwrqkl5" path="res://resources/shooters/totems/Head 3/Attack 1/2.png" id="8_i72dr"]
+[ext_resource type="Texture2D" uid="uid://dfv3lylmhphij" path="res://resources/shooters/totems/Head 3/Attack 1/3.png" id="9_x5s45"]
+[ext_resource type="Texture2D" uid="uid://csbi1wfvx0k5n" path="res://resources/shooters/totems/Head 3/Attack 1/4.png" id="10_1bj5h"]
+[ext_resource type="Texture2D" uid="uid://bc1jyfqin60l6" path="res://resources/shooters/totems/Head 3/Attack 1/5.png" id="11_02qf6"]
+[ext_resource type="Texture2D" uid="uid://pd7s3se3edkn" path="res://resources/shooters/totems/Head 3/Attack 1/6.png" id="12_mkvm4"]
+[ext_resource type="Texture2D" uid="uid://b8vuuxbnhmsvg" path="res://resources/shooters/totems/Head 3/Destroyed/2.png" id="13_6ci8f"]
+[ext_resource type="Texture2D" uid="uid://coj3ryj5xixv" path="res://resources/shooters/totems/Head 3/Destroyed/1.png" id="14_f8tkf"]
+[ext_resource type="Texture2D" uid="uid://lwbdp6gxo014" path="res://resources/shooters/totems/Head 3/Hit 2/1.png" id="15_sr7v7"]
+[ext_resource type="Texture2D" uid="uid://cf4rxt2wg330c" path="res://resources/shooters/totems/Head 3/Hit 2/2.png" id="16_nck4w"]
+[ext_resource type="Texture2D" uid="uid://bjwb7oh0dje3u" path="res://resources/shooters/totems/Head 3/Hit 2/3.png" id="17_08gyh"]
+[ext_resource type="Texture2D" uid="uid://cyhk5e27g207g" path="res://resources/shooters/totems/Head 3/Hit 2/4.png" id="18_2i8rs"]
+[ext_resource type="Texture2D" uid="uid://vnmmolmtpw8e" path="res://resources/shooters/totems/Head 3/Hit 1/1.png" id="19_86f1y"]
+[ext_resource type="Texture2D" uid="uid://bbrtcj6u8vpgd" path="res://resources/shooters/totems/Head 3/Hit 1/2.png" id="20_m0qld"]
+[ext_resource type="Texture2D" uid="uid://def2ngnl6aaq7" path="res://resources/shooters/totems/Head 3/Hit 1/3.png" id="21_6pqse"]
+[ext_resource type="Texture2D" uid="uid://b1t81afaabe67" path="res://resources/shooters/totems/Head 3/Hit 1/4.png" id="22_183tm"]
+[ext_resource type="Texture2D" uid="uid://bmkg65vpm7mo1" path="res://resources/shooters/totems/Head 3/Idle 2/1.png" id="23_m3dif"]
+[ext_resource type="Texture2D" uid="uid://c7rd2g534x052" path="res://resources/shooters/totems/Head 3/Idle 1/1.png" id="24_xyvmi"]
+[ext_resource type="Texture2D" uid="uid://cy0otc8lmwmiv" path="res://resources/shooters/totems/Head 3/Destroyed/3.png" id="26_f5g2r"]
+[ext_resource type="Texture2D" uid="uid://dgf83m23diiam" path="res://resources/shooters/totems/Head 3/Destroyed/5.png" id="27_qy1xs"]
+[ext_resource type="Texture2D" uid="uid://dlo3t5fo1rmlk" path="res://resources/shooters/totems/Head 3/Destroyed/6.png" id="28_6muhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1yul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6tbjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_14wg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2343k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4c0n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ymudx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ubhyn")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_5468a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i72dr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x5s45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1bj5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_02qf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mkvm4")
+}],
+"loop": false,
+"name": &"attack_top",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_6ci8f")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_f8tkf")
+}],
+"loop": false,
+"name": &"destroy_top",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_sr7v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nck4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_08gyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2i8rs")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_86f1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_m0qld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6pqse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_183tm")
+}],
+"loop": false,
+"name": &"hit_top",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_m3dif")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_xyvmi")
+}],
+"loop": false,
+"name": &"idle_top",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ld6"]
+size = Vector2(20, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddjly"]
+size = Vector2(20, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbp7y"]
+size = Vector2(18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypds8"]
+size = Vector2(12, 14)
+
+[node name="TotemHead3" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 23
+script = ExtResource("1_66ke1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -16)
+sprite_frames = SubResource("SpriteFrames_h1yul")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_q2ld6")
+
+[node name="Parts" type="Node" parent="."]
+
+[node name="Top" type="RigidBody2D" parent="Parts"]
+collision_layer = 64
+collision_mask = 65
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/Top"]
+position = Vector2(0, -22)
+texture = ExtResource("26_f5g2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Top"]
+position = Vector2(0, -19)
+shape = SubResource("RectangleShape2D_ddjly")
+
+[node name="Middle" type="RigidBody2D" parent="Parts"]
+collision_layer = 64
+collision_mask = 65
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/Middle"]
+position = Vector2(-2, -8)
+texture = ExtResource("27_qy1xs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Middle"]
+position = Vector2(-1, -9)
+shape = SubResource("RectangleShape2D_mbp7y")
+
+[node name="Bottom" type="RigidBody2D" parent="Parts"]
+collision_layer = 64
+collision_mask = 65
+
+[node name="Sprite2D" type="Sprite2D" parent="Parts/Bottom"]
+position = Vector2(3, -8)
+texture = ExtResource("28_6muhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Bottom"]
+position = Vector2(4, -7)
+shape = SubResource("RectangleShape2D_ypds8")

@@ -1,0 +1,171 @@
+[gd_scene load_steps=31 format=3 uid="uid://cp7laumhaklh7"]
+
+[ext_resource type="Texture2D" uid="uid://cp5mtag7l5rem" path="res://resources/shooters/seashell/Seashell Bite/1.png" id="1_1ne11"]
+[ext_resource type="Texture2D" uid="uid://bhiouxei4htkg" path="res://resources/shooters/seashell/Seashell Bite/2.png" id="2_6emk5"]
+[ext_resource type="Texture2D" uid="uid://ujd7vmjfio0j" path="res://resources/shooters/seashell/Seashell Bite/3.png" id="3_oj5dn"]
+[ext_resource type="Texture2D" uid="uid://didtbnoovcjuf" path="res://resources/shooters/seashell/Seashell Bite/4.png" id="4_03wjv"]
+[ext_resource type="Texture2D" uid="uid://nhrd3cvoqesd" path="res://resources/shooters/seashell/Seashell Bite/5.png" id="5_bmsuj"]
+[ext_resource type="Texture2D" uid="uid://dhcssupmxq3vu" path="res://resources/shooters/seashell/Seashell Bite/6.png" id="6_b2u4r"]
+[ext_resource type="Texture2D" uid="uid://bahv735647wot" path="res://resources/shooters/seashell/Seashell Destroyed/1.png" id="7_3ymgj"]
+[ext_resource type="Texture2D" uid="uid://blt03m1i2psao" path="res://resources/shooters/seashell/Seashell Destroyed/2.png" id="8_tb76k"]
+[ext_resource type="Texture2D" uid="uid://chdcc2m1v4eii" path="res://resources/shooters/seashell/Seashell Destroyed/3.png" id="9_3ph8e"]
+[ext_resource type="Texture2D" uid="uid://sh1a3srhi2yt" path="res://resources/shooters/seashell/Seashell Destroyed/4.png" id="10_p0e0k"]
+[ext_resource type="Texture2D" uid="uid://dlrewnovwqbsn" path="res://resources/shooters/seashell/Seashell Destroyed/5.png" id="11_vccie"]
+[ext_resource type="Texture2D" uid="uid://cbq2obxih6y1i" path="res://resources/shooters/seashell/Seashell Hit/1.png" id="12_0fuwc"]
+[ext_resource type="Texture2D" uid="uid://ctr7no4nuuvjb" path="res://resources/shooters/seashell/Seashell Hit/2.png" id="13_qxe6y"]
+[ext_resource type="Texture2D" uid="uid://dod4vxx6qpa1f" path="res://resources/shooters/seashell/Seashell Hit/3.png" id="14_fulh6"]
+[ext_resource type="Texture2D" uid="uid://b3hu0t258vdm2" path="res://resources/shooters/seashell/Seashell Hit/4.png" id="15_avk2y"]
+[ext_resource type="Texture2D" uid="uid://ca68sl5kluu2v" path="res://resources/shooters/seashell/Seashell Idle/1.png" id="16_288wh"]
+[ext_resource type="Texture2D" uid="uid://bdowfgnbvrkah" path="res://resources/shooters/seashell/Seashell Opening/1.png" id="17_0a6t7"]
+[ext_resource type="Texture2D" uid="uid://bcujhx7rqa8ra" path="res://resources/shooters/seashell/Seashell Opening/2.png" id="18_d8ima"]
+[ext_resource type="Texture2D" uid="uid://c7yawhgm8qpra" path="res://resources/shooters/seashell/Seashell Opening/3.png" id="19_bp04o"]
+[ext_resource type="Texture2D" uid="uid://bixxleetgs7kl" path="res://resources/shooters/seashell/Seashell Opening/4.png" id="20_xn0yw"]
+[ext_resource type="Texture2D" uid="uid://dslx4qils88dy" path="res://resources/shooters/seashell/Seashell Opening/5.png" id="21_d2k86"]
+[ext_resource type="Texture2D" uid="uid://c6cwe5dtkgu1x" path="res://resources/shooters/seashell/Seashell Fire/1.png" id="22_wqmkc"]
+[ext_resource type="Texture2D" uid="uid://cto2xcc7rqcsq" path="res://resources/shooters/seashell/Seashell Fire/2.png" id="23_nmsxn"]
+[ext_resource type="Texture2D" uid="uid://d2ofm52s2yle2" path="res://resources/shooters/seashell/Seashell Fire/3.png" id="24_o4csy"]
+[ext_resource type="Texture2D" uid="uid://bf5wtpt6u5oct" path="res://resources/shooters/seashell/Seashell Fire/4.png" id="25_k50rh"]
+[ext_resource type="Texture2D" uid="uid://toco8tibjojn" path="res://resources/shooters/seashell/Seashell Fire/5.png" id="26_lb8f5"]
+[ext_resource type="Texture2D" uid="uid://dvq4ynwxrgp2l" path="res://resources/shooters/seashell/Seashell Fire/6.png" id="27_weo3t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v5tlh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1ne11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6emk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oj5dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_03wjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bmsuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b2u4r")
+}],
+"loop": false,
+"name": &"bite",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3ymgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tb76k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3ph8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p0e0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vccie")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_0fuwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qxe6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fulh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_avk2y")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_288wh")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_0a6t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d8ima")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bp04o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xn0yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_d2k86")
+}],
+"loop": false,
+"name": &"open",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_wqmkc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_nmsxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_o4csy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_k50rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_lb8f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_weo3t")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4cch"]
+size = Vector2(30, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g81id"]
+
+[node name="Seashell" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -19)
+sprite_frames = SubResource("SpriteFrames_v5tlh")
+animation = &"open"
+autoplay = "idle"
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_a4cch")
+
+[node name="ShootPosition" type="Marker2D" parent="."]
+position = Vector2(-20, -9)
+
+[node name="BiteRange" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiteRange"]
+visible = false
+shape = SubResource("RectangleShape2D_g81id")

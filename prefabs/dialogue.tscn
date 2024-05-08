@@ -1,0 +1,86 @@
+[gd_scene load_steps=17 format=3 uid="uid://dmksgvlb7i813"]
+
+[ext_resource type="Texture2D" uid="uid://c2ft8knlv14px" path="res://resources/dialogue/dead/Dead In 01.png" id="1_qe7j8"]
+[ext_resource type="Texture2D" uid="uid://cyd04irduow28" path="res://resources/dialogue/dead/Dead In 02.png" id="2_r86in"]
+[ext_resource type="Texture2D" uid="uid://cwl0mybf7n2o6" path="res://resources/dialogue/dead/Dead In 03.png" id="3_3nnyc"]
+[ext_resource type="Texture2D" uid="uid://yy7fag37pdiv" path="res://resources/dialogue/dead/Dead Out 01.png" id="4_77aot"]
+[ext_resource type="Texture2D" uid="uid://bskxjh4n3udcg" path="res://resources/dialogue/dead/Dead Out 02.png" id="5_ihh3b"]
+[ext_resource type="Texture2D" uid="uid://bj83g3b1270sw" path="res://resources/dialogue/exclamation/Exclamation In 01.png" id="6_632jt"]
+[ext_resource type="Texture2D" uid="uid://cwd1bbapcrfwh" path="res://resources/dialogue/exclamation/Exclamation In 02.png" id="7_a6pln"]
+[ext_resource type="Texture2D" uid="uid://opeehl775lsu" path="res://resources/dialogue/exclamation/Exclamation In 03.png" id="8_j4s37"]
+[ext_resource type="Texture2D" uid="uid://cohtvrsgxq87o" path="res://resources/dialogue/exclamation/Exclamation Out 01.png" id="9_kcbfs"]
+[ext_resource type="Texture2D" uid="uid://cajoubxf2egid" path="res://resources/dialogue/exclamation/Exclamation Out 02.png" id="10_blphx"]
+[ext_resource type="Texture2D" uid="uid://cqq56q8grb6vt" path="res://resources/dialogue/interrogation/Interrogation In 01.png" id="11_y8qit"]
+[ext_resource type="Texture2D" uid="uid://doer6o756p0mp" path="res://resources/dialogue/interrogation/Interrogation In 02.png" id="12_rvwj1"]
+[ext_resource type="Texture2D" uid="uid://bk5qnx3tal7wy" path="res://resources/dialogue/interrogation/Interrogation In 03.png" id="13_ry6bx"]
+[ext_resource type="Texture2D" uid="uid://cfqnxs230jyeh" path="res://resources/dialogue/interrogation/Interrogation Out 01.png" id="14_6yxli"]
+[ext_resource type="Texture2D" uid="uid://dncx4exi8vpu" path="res://resources/dialogue/interrogation/Interrogation Out 02.png" id="15_aq1oq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjx5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qe7j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_r86in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3nnyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_77aot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ihh3b")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_632jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a6pln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j4s37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kcbfs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_blphx")
+}],
+"loop": true,
+"name": &"exclamation",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_y8qit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rvwj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ry6bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6yxli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aq1oq")
+}],
+"loop": true,
+"name": &"interrogation",
+"speed": 10.0
+}]
+
+[node name="Dialogue" type="AnimatedSprite2D"]
+position = Vector2(2, -32)
+sprite_frames = SubResource("SpriteFrames_bjx5c")
+animation = &"interrogation"
+frame_progress = 0.0381892

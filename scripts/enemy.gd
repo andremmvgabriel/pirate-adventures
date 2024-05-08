@@ -7,11 +7,11 @@ class_name Enemy
 @export var decomposition_time = 60
 
 # Variables
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+#var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Components
 @onready var animator = $AnimatedSprite2D
-@onready var collider = $CollisionShape2D
+#@onready var collider = $CollisionShape2D
 
 var knock = false
 var knock_force = 100

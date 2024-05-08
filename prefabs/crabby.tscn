@@ -1,0 +1,232 @@
+[gd_scene load_steps=45 format=3 uid="uid://b7x44o6drm6wg"]
+
+[ext_resource type="Texture2D" uid="uid://c6jbljivnqbut" path="res://resources/enemies/crabby/06-Anticipation/Anticipation 01.png" id="1_mlihv"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_p5idp"]
+[ext_resource type="Texture2D" uid="uid://ckb70tieursdl" path="res://resources/enemies/crabby/06-Anticipation/Anticipation 02.png" id="2_vqimd"]
+[ext_resource type="Texture2D" uid="uid://cqnkl3ecnbw4i" path="res://resources/enemies/crabby/06-Anticipation/Anticipation 03.png" id="3_l7snu"]
+[ext_resource type="Texture2D" uid="uid://66nth1uskgxv" path="res://resources/enemies/crabby/07-Attack/Attack 01.png" id="4_4f8wg"]
+[ext_resource type="Texture2D" uid="uid://c4iv6plaxkccw" path="res://resources/enemies/crabby/07-Attack/Attack 02.png" id="5_fggvi"]
+[ext_resource type="Texture2D" uid="uid://obkn120fj784" path="res://resources/enemies/crabby/07-Attack/Attack 03.png" id="6_k2c85"]
+[ext_resource type="Texture2D" uid="uid://dc2fcpst8o83t" path="res://resources/enemies/crabby/07-Attack/Attack 04.png" id="7_hfetk"]
+[ext_resource type="Texture2D" uid="uid://bj7c0kibj31ou" path="res://resources/enemies/crabby/09-Dead Hit/Dead Hit 01.png" id="8_2bply"]
+[ext_resource type="Texture2D" uid="uid://cm5b4n71enj65" path="res://resources/enemies/crabby/09-Dead Hit/Dead Hit 02.png" id="9_u46e8"]
+[ext_resource type="Texture2D" uid="uid://bb88r2hsbbs6l" path="res://resources/enemies/crabby/09-Dead Hit/Dead Hit 03.png" id="10_j6bic"]
+[ext_resource type="Texture2D" uid="uid://cwor42rdx5v3a" path="res://resources/enemies/crabby/09-Dead Hit/Dead Hit 04.png" id="11_aokws"]
+[ext_resource type="Texture2D" uid="uid://d1li68rgbhobj" path="res://resources/enemies/crabby/10-Dead Ground/Dead Ground 01.png" id="12_823og"]
+[ext_resource type="Texture2D" uid="uid://cjfnn4uf6td1o" path="res://resources/enemies/crabby/10-Dead Ground/Dead Ground 02.png" id="13_wsgwy"]
+[ext_resource type="Texture2D" uid="uid://dswsse3cgyxt6" path="res://resources/enemies/crabby/10-Dead Ground/Dead Ground 03.png" id="14_ndefl"]
+[ext_resource type="Texture2D" uid="uid://o0mbpktcjbow" path="res://resources/enemies/crabby/10-Dead Ground/Dead Ground 04.png" id="15_5vqbt"]
+[ext_resource type="Texture2D" uid="uid://6wvlsnm88yla" path="res://resources/enemies/crabby/04-Fall/Fall 01.png" id="16_3cj3f"]
+[ext_resource type="Texture2D" uid="uid://6h2g2y21x2bk" path="res://resources/enemies/crabby/05-Ground/Ground 01.png" id="17_7ae47"]
+[ext_resource type="Texture2D" uid="uid://cdj10a60o8fis" path="res://resources/enemies/crabby/05-Ground/Ground 02.png" id="18_gyux5"]
+[ext_resource type="Texture2D" uid="uid://djouetq6h3npn" path="res://resources/enemies/crabby/08-Hit/Hit 01.png" id="19_62bpw"]
+[ext_resource type="Texture2D" uid="uid://44uqeu4t85v1" path="res://resources/enemies/crabby/08-Hit/Hit 02.png" id="20_a2185"]
+[ext_resource type="Texture2D" uid="uid://ccmfye7ncfvej" path="res://resources/enemies/crabby/08-Hit/Hit 03.png" id="21_ogj78"]
+[ext_resource type="Texture2D" uid="uid://cjovk58dnbi4m" path="res://resources/enemies/crabby/08-Hit/Hit 04.png" id="22_kbhjj"]
+[ext_resource type="Texture2D" uid="uid://n0xqoxcbdcc2" path="res://resources/enemies/crabby/01-Idle/Idle 01.png" id="23_2bgs6"]
+[ext_resource type="Texture2D" uid="uid://ufhvdxe1kp8l" path="res://resources/enemies/crabby/01-Idle/Idle 02.png" id="24_krnba"]
+[ext_resource type="Texture2D" uid="uid://c24p8o33sd4cj" path="res://resources/enemies/crabby/01-Idle/Idle 03.png" id="25_gp72o"]
+[ext_resource type="Texture2D" uid="uid://cjrvw6iwswthr" path="res://resources/enemies/crabby/01-Idle/Idle 04.png" id="26_gkpp8"]
+[ext_resource type="Texture2D" uid="uid://dt25uddjat84v" path="res://resources/enemies/crabby/01-Idle/Idle 05.png" id="27_ku850"]
+[ext_resource type="Texture2D" uid="uid://d1nqjpieg6kvh" path="res://resources/enemies/crabby/01-Idle/Idle 06.png" id="28_yda35"]
+[ext_resource type="Texture2D" uid="uid://bqauxmi5mnmcn" path="res://resources/enemies/crabby/01-Idle/Idle 07.png" id="29_qfqgn"]
+[ext_resource type="Texture2D" uid="uid://dts8lwvcs63l8" path="res://resources/enemies/crabby/01-Idle/Idle 08.png" id="30_dw4b8"]
+[ext_resource type="Texture2D" uid="uid://bxqi2jli8a5mo" path="res://resources/enemies/crabby/01-Idle/Idle 09.png" id="31_jvggc"]
+[ext_resource type="Texture2D" uid="uid://bnnl5x30c65f3" path="res://resources/enemies/crabby/03-Jump/Jump 01.png" id="32_sx64p"]
+[ext_resource type="Texture2D" uid="uid://b1yc1dkuv348g" path="res://resources/enemies/crabby/03-Jump/Jump 02.png" id="33_r0637"]
+[ext_resource type="Texture2D" uid="uid://c0ajqfaj3fv22" path="res://resources/enemies/crabby/03-Jump/Jump 03.png" id="34_ls5fs"]
+[ext_resource type="Texture2D" uid="uid://4fhubebbraqb" path="res://resources/enemies/crabby/02-Run/Run 01.png" id="35_gi06o"]
+[ext_resource type="Texture2D" uid="uid://doqxv3d6qvbm0" path="res://resources/enemies/crabby/02-Run/Run 02.png" id="36_jkdf7"]
+[ext_resource type="Texture2D" uid="uid://b2pguqd2qao76" path="res://resources/enemies/crabby/02-Run/Run 03.png" id="37_dp0rh"]
+[ext_resource type="Texture2D" uid="uid://x5vlvwskko4c" path="res://resources/enemies/crabby/02-Run/Run 04.png" id="38_yi022"]
+[ext_resource type="Texture2D" uid="uid://dmr6f43pvklnw" path="res://resources/enemies/crabby/02-Run/Run 05.png" id="39_r3ou6"]
+[ext_resource type="Texture2D" uid="uid://wl2nf1p8gf01" path="res://resources/enemies/crabby/02-Run/Run 06.png" id="40_vo7a5"]
+[ext_resource type="PackedScene" uid="uid://dmksgvlb7i813" path="res://prefabs/dialogue.tscn" id="41_s0kdy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vt4s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mlihv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vqimd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l7snu")
+}],
+"loop": false,
+"name": &"anticipation",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4f8wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fggvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k2c85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hfetk")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2bply")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u46e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j6bic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aokws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_823og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wsgwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ndefl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5vqbt")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_3cj3f")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_7ae47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gyux5")
+}],
+"loop": false,
+"name": &"ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_62bpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_a2185")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ogj78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kbhjj")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_2bgs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_krnba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gp72o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gkpp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ku850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_yda35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qfqgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dw4b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jvggc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_sx64p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_r0637")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ls5fs")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_gi06o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jkdf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_dp0rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yi022")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_r3ou6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vo7a5")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d63rw"]
+size = Vector2(22, 19)
+
+[node name="Crabby" type="RigidBody2D"]
+collision_layer = 4
+script = ExtResource("1_p5idp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -13)
+sprite_frames = SubResource("SpriteFrames_6vt4s")
+animation = &"run"
+autoplay = "idle"
+frame_progress = 0.173851
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_d63rw")
+
+[node name="Dialogue" parent="." instance=ExtResource("41_s0kdy")]

@@ -80,4 +80,7 @@ func _on_sword_body_entered(body):
 		var hit_dir = int(animator.flip_h == false) * 2 - 1
 		body.hit(25, hit_dir)
 	
+	if body is Shooter:
+		body.hit(25)
+	
 # Public functions
