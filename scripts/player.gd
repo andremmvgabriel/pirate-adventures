@@ -78,6 +78,6 @@ func _attack():
 func _on_sword_body_entered(body):
 	if body is Enemy:
 		var hit_dir = int(animator.flip_h == false) * 2 - 1
-		body.hit(hit_dir)
+		body.hit(25, hit_dir)
 	
 # Public functions

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://i5j1hk616tks"]
+[gd_scene load_steps=6 format=3 uid="uid://i5j1hk616tks"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_schle"]
 [ext_resource type="PackedScene" uid="uid://bfagb74y8iigv" path="res://prefabs/world_tile_map.tscn" id="1_xa844"]
 [ext_resource type="PackedScene" uid="uid://wdma7a0do52f" path="res://prefabs/player.tscn" id="2_o7xou"]
 [ext_resource type="PackedScene" uid="uid://wenokfjyu3n3" path="res://prefabs/death_zone.tscn" id="4_ntiv5"]
+[ext_resource type="PackedScene" uid="uid://cxste5jum0njs" path="res://prefabs/star.tscn" id="5_oucob"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_schle")
@@ -12,6 +13,13 @@ script = ExtResource("1_schle")
 layer_0/tile_data = PackedInt32Array(393216, 65536, 4, 393217, 65536, 4, 393218, 65536, 4, 393219, 65536, 4, 393220, 65536, 4, 393221, 65536, 4, 393222, 65536, 4, 393223, 65536, 4, 393224, 65536, 4, 393225, 65536, 4, 393226, 65536, 4, 393227, 65536, 4, 393228, 131072, 4, 458751, 0, 4)
 
 [node name="Player" parent="." instance=ExtResource("2_o7xou")]
-position = Vector2(310, 121)
+position = Vector2(82, 121)
 
 [node name="DeathZone" parent="." instance=ExtResource("4_ntiv5")]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Star" parent="Enemies" instance=ExtResource("5_oucob")]
+position = Vector2(178, 116)
+
+[node name="RespawnPoint" type="Marker2D" parent="."]
