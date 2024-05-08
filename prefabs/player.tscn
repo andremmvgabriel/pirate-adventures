@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://wdma7a0do52f"]
+[gd_scene load_steps=73 format=3 uid="uid://wdma7a0do52f"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_d0ksb"]
 [ext_resource type="Texture2D" uid="uid://co46ci8hcdgxt" path="res://resources/player/01-Idle/Idle 01.png" id="1_o0ake"]
@@ -375,6 +375,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsxpx"]
 size = Vector2(18, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qulkf"]
+size = Vector2(19, 4)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_d0ksb")
@@ -382,9 +385,9 @@ script = ExtResource("1_d0ksb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_h414p")
-animation = &"01_idle"
+animation = &"15_attack_1"
 autoplay = "01_idle"
-frame_progress = 0.124096
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -13)
@@ -392,3 +395,11 @@ shape = SubResource("RectangleShape2D_hsxpx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_bottom = 216
+
+[node name="Sword" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword"]
+position = Vector2(22.5, -9)
+shape = SubResource("RectangleShape2D_qulkf")

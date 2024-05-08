@@ -11,8 +11,16 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # Components
 @onready var animator = $AnimatedSprite2D
+@onready var sword = $Sword
+@onready var sword_collision = $Sword/CollisionShape2D
+
+@onready var sword_collision_pos = sword_collision.position.x
 
 # Private functions
+func _ready():
+	sword.connect("body_entered", _on_sword_body_entered)
+	sword_collision.disabled = true
+
 func _physics_process(delta):
 	# Gravity handling
 	if not is_on_floor():
@@ -28,6 +36,10 @@ func _physics_process(delta):
 	_update_animations(x_direction)
 	velocity.x = x_direction * speed
 	
+	# Sword direction handling
+	if (x_direction):
+		sword_collision.position.x = sword_collision_pos * x_direction
+	
 	move_and_slide()
 
 func _update_animations(direction):
@@ -37,7 +49,8 @@ func _update_animations(direction):
 	for attack_type in ["15_attack_1", "16_attack_2", "17_attack_3"]:
 		if animator.animation == attack_type and animator.is_playing():
 			return
-			
+	
+	sword_collision.disabled = true
 	var attack = Input.is_action_just_pressed("attack")
 	
 	if is_on_floor():
@@ -47,7 +60,7 @@ func _update_animations(direction):
 			animator.play("01_idle")
 		
 		if attack:
-			animator.play("15_attack_1")
+			_attack()
 	else:
 		if velocity.y < 0:
 			animator.play("03_jump")
@@ -55,8 +68,16 @@ func _update_animations(direction):
 			animator.play("04_fall")
 		
 		if attack:
-			animator.play("17_attack_3")
+			_attack()
+
+func _attack():
+	animator.play("15_attack_1")
+	sword_collision.disabled = false
 
 # Callbacks
+func _on_sword_body_entered(body):
+	if body is Enemy:
+		var hit_dir = int(animator.flip_h == false) * 2 - 1
+		body.hit(hit_dir)
 	
 # Public functions
