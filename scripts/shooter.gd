@@ -2,16 +2,22 @@ extends RigidBody2D
 
 class_name Shooter
 
+enum ShooterType {
+	TotemHead1,
+	TotemHead2,
+	TotemHead3
+}
+
+signal shooter_destroyed (type, position)
+
 # Serializable Variables
 @export var health = 100
 @export var decomposition_time = 60
 @export var is_top = true
+@export var shooter_type = ShooterType.TotemHead1
 
 # Components
 @onready var animator = $AnimatedSprite2D
-@onready var top_part = $Parts/Top
-@onready var middle_part = $Parts/Middle
-@onready var bottom_part = $Parts/Bottom
 
 # Private functions
 func _ready():
@@ -19,15 +25,15 @@ func _ready():
 		animator.play("idle_top")
 	else:
 		animator.play("idle")
-	top_part.visible = false
-	middle_part.visible = false
-	bottom_part.visible = false
 
-func _explode():
-	top_part.visible = true
-	middle_part.visible = true
-	bottom_part.visible = true
-	animator.visible = false
+func _destroy():
+	if is_top:
+		animator.play("destroy_top")
+	else:
+		animator.play("destroy")
+	await animator.animation_finished
+	shooter_destroyed.emit(shooter_type, global_position)
+	queue_free()
 
 # Public functions
 func hit(damage):
@@ -40,8 +46,4 @@ func hit(damage):
 		animator.play("hit")
 	
 	if health <= 0:
-		if is_top:
-			animator.play("destroy_top")
-		else:
-			animator.play("destroy")
-		_explode()
+		_destroy()

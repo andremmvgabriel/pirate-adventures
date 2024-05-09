@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dnhqtyrro13af"]
+[gd_scene load_steps=28 format=3 uid="uid://dnhqtyrro13af"]
 
 [ext_resource type="Texture2D" uid="uid://bcpfnjn3rhjrw" path="res://resources/shooters/totems/Head 1/Attack 2/1.png" id="1_gfdo3"]
 [ext_resource type="Script" path="res://scripts/shooter.gd" id="1_xvjjj"]
@@ -25,9 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://im8hb5gu8i4c" path="res://resources/shooters/totems/Head 1/Hit 1/4.png" id="22_pixhx"]
 [ext_resource type="Texture2D" uid="uid://bxkattuh8ejmm" path="res://resources/shooters/totems/Head 1/Idle 1/1.png" id="23_uno66"]
 [ext_resource type="Texture2D" uid="uid://bsxwe4lwu80v3" path="res://resources/shooters/totems/Head 1/Idle 2/1.png" id="24_5y7bs"]
-[ext_resource type="Texture2D" uid="uid://d2d7iihqrg83s" path="res://resources/shooters/totems/Head 1/Destroyed/3.png" id="26_7gfur"]
-[ext_resource type="Texture2D" uid="uid://bs4xc17ww7gyk" path="res://resources/shooters/totems/Head 1/Destroyed/5.png" id="27_w7v8f"]
-[ext_resource type="Texture2D" uid="uid://d1t1usdeue3ml" path="res://resources/shooters/totems/Head 1/Destroyed/6.png" id="28_h8r64"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_84p53"]
 animations = [{
@@ -145,29 +142,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i5xdp"]
-size = Vector2(20, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jesds"]
-size = Vector2(56, 9)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_melf3"]
-size = Vector2(20, 4)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_32yy8"]
-size = Vector2(15, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tocft"]
-size = Vector2(14, 7)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e08tc"]
-size = Vector2(13, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn0jd"]
-size = Vector2(22, 7)
+size = Vector2(20, 22)
 
 [node name="TotemHead1" type="RigidBody2D"]
 collision_layer = 16
 collision_mask = 23
+can_sleep = false
 script = ExtResource("1_xvjjj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -175,58 +155,6 @@ position = Vector2(4, -15)
 sprite_frames = SubResource("SpriteFrames_84p53")
 animation = &"idle"
 
-[node name="HeadCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_i5xdp")
-
-[node name="WingsCollision" type="CollisionShape2D" parent="."]
-position = Vector2(4, -11.5)
-shape = SubResource("RectangleShape2D_jesds")
-
-[node name="Parts" type="Node" parent="."]
-
-[node name="Top" type="RigidBody2D" parent="Parts"]
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Top"]
-position = Vector2(0, -22)
-texture = ExtResource("26_7gfur")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Top"]
-position = Vector2(0, -19)
-shape = SubResource("RectangleShape2D_melf3")
-
-[node name="Middle" type="RigidBody2D" parent="Parts"]
-visible = false
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Middle"]
-position = Vector2(-9, -9)
-texture = ExtResource("27_w7v8f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Middle"]
-position = Vector2(-2.5, -8.5)
-shape = SubResource("RectangleShape2D_32yy8")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parts/Middle"]
-position = Vector2(-17, -11.5)
-shape = SubResource("RectangleShape2D_tocft")
-
-[node name="Bottom" type="RigidBody2D" parent="Parts"]
-visible = false
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Bottom"]
-position = Vector2(12, -9)
-texture = ExtResource("28_h8r64")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Bottom"]
-position = Vector2(3.5, -8.5)
-shape = SubResource("RectangleShape2D_e08tc")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parts/Bottom"]
-position = Vector2(21, -11.5)
-shape = SubResource("RectangleShape2D_pn0jd")

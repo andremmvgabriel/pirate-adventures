@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cdhl3ff3k7y1r"]
+[gd_scene load_steps=28 format=3 uid="uid://cdhl3ff3k7y1r"]
 
 [ext_resource type="Texture2D" uid="uid://k0dpc4ripvnq" path="res://resources/shooters/totems/Head 3/Attack 2/1.png" id="1_6tbjw"]
 [ext_resource type="Script" path="res://scripts/shooter.gd" id="1_66ke1"]
@@ -25,9 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://b1t81afaabe67" path="res://resources/shooters/totems/Head 3/Hit 1/4.png" id="22_183tm"]
 [ext_resource type="Texture2D" uid="uid://bmkg65vpm7mo1" path="res://resources/shooters/totems/Head 3/Idle 2/1.png" id="23_m3dif"]
 [ext_resource type="Texture2D" uid="uid://c7rd2g534x052" path="res://resources/shooters/totems/Head 3/Idle 1/1.png" id="24_xyvmi"]
-[ext_resource type="Texture2D" uid="uid://cy0otc8lmwmiv" path="res://resources/shooters/totems/Head 3/Destroyed/3.png" id="26_f5g2r"]
-[ext_resource type="Texture2D" uid="uid://dgf83m23diiam" path="res://resources/shooters/totems/Head 3/Destroyed/5.png" id="27_qy1xs"]
-[ext_resource type="Texture2D" uid="uid://dlo3t5fo1rmlk" path="res://resources/shooters/totems/Head 3/Destroyed/6.png" id="28_6muhe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1yul"]
 animations = [{
@@ -145,21 +142,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q2ld6"]
-size = Vector2(20, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddjly"]
-size = Vector2(20, 4)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbp7y"]
-size = Vector2(18, 18)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypds8"]
-size = Vector2(12, 14)
+size = Vector2(20, 22)
 
 [node name="TotemHead3" type="RigidBody2D"]
 collision_layer = 16
 collision_mask = 23
+can_sleep = false
 script = ExtResource("1_66ke1")
+shooter_type = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3, -16)
@@ -167,43 +157,5 @@ sprite_frames = SubResource("SpriteFrames_h1yul")
 animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10.5)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_q2ld6")
-
-[node name="Parts" type="Node" parent="."]
-
-[node name="Top" type="RigidBody2D" parent="Parts"]
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Top"]
-position = Vector2(0, -22)
-texture = ExtResource("26_f5g2r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Top"]
-position = Vector2(0, -19)
-shape = SubResource("RectangleShape2D_ddjly")
-
-[node name="Middle" type="RigidBody2D" parent="Parts"]
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Middle"]
-position = Vector2(-2, -8)
-texture = ExtResource("27_qy1xs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Middle"]
-position = Vector2(-1, -9)
-shape = SubResource("RectangleShape2D_mbp7y")
-
-[node name="Bottom" type="RigidBody2D" parent="Parts"]
-collision_layer = 64
-collision_mask = 65
-
-[node name="Sprite2D" type="Sprite2D" parent="Parts/Bottom"]
-position = Vector2(3, -8)
-texture = ExtResource("28_6muhe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Parts/Bottom"]
-position = Vector2(4, -7)
-shape = SubResource("RectangleShape2D_ypds8")

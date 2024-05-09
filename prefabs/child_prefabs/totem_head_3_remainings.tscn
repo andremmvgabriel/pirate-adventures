@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs8wv3y1kqlmm"]
+
+[ext_resource type="Script" path="res://scripts/totem_head_remainings.gd" id="1_nc12a"]
+[ext_resource type="Texture2D" uid="uid://cy0otc8lmwmiv" path="res://resources/shooters/totems/Head 3/Destroyed/3.png" id="1_wixdg"]
+[ext_resource type="Texture2D" uid="uid://dgf83m23diiam" path="res://resources/shooters/totems/Head 3/Destroyed/5.png" id="2_ojkxh"]
+[ext_resource type="Texture2D" uid="uid://dlo3t5fo1rmlk" path="res://resources/shooters/totems/Head 3/Destroyed/6.png" id="3_e6vpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddjly"]
+size = Vector2(20, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbp7y"]
+size = Vector2(18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypds8"]
+size = Vector2(12, 14)
+
+[node name="TotemHead3Remainings" type="Node2D"]
+script = ExtResource("1_nc12a")
+
+[node name="Topper" type="RigidBody2D" parent="."]
+collision_layer = 64
+
+[node name="Sprite2D" type="Sprite2D" parent="Topper"]
+position = Vector2(0, -22)
+texture = ExtResource("1_wixdg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Topper"]
+position = Vector2(0, -19)
+shape = SubResource("RectangleShape2D_ddjly")
+
+[node name="Middle" type="RigidBody2D" parent="."]
+collision_layer = 64
+
+[node name="Sprite2D" type="Sprite2D" parent="Middle"]
+position = Vector2(-2, -8)
+texture = ExtResource("2_ojkxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Middle"]
+position = Vector2(-1, -9)
+shape = SubResource("RectangleShape2D_mbp7y")
+
+[node name="Bottom" type="RigidBody2D" parent="."]
+collision_layer = 64
+
+[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
+position = Vector2(3, -8)
+texture = ExtResource("3_e6vpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(4, -7)
+shape = SubResource("RectangleShape2D_ypds8")

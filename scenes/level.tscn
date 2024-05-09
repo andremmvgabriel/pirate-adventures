@@ -37,13 +37,15 @@ position = Vector2(319, 135)
 position = Vector2(373, 188)
 
 [node name="TotemHead1" parent="Shooters" instance=ExtResource("8_7crmr")]
-position = Vector2(0, 177)
-is_top = false
+position = Vector2(0, 19)
 
 [node name="TotemHead2" parent="Shooters" instance=ExtResource("9_tub40")]
+position = Vector2(0, 41)
+is_top = false
 
 [node name="TotemHead3" parent="Shooters" instance=ExtResource("10_0vyqa")]
 position = Vector2(0, 63)
+is_top = false
 
 [node name="RespawnPoint" type="Marker2D" parent="."]
 
