@@ -22,6 +22,7 @@ func _physics_process(delta):
 	if animator.animation == "dead":
 		await get_tree().create_timer(decomposition_time).timeout
 		queue_free()
+		return
 	
 	if knock:
 		if health <= 0:
